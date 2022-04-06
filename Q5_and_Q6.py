@@ -143,10 +143,7 @@ file_names = sorted(os.listdir(data_path))
 file_names = [f for f in file_names if '.jpg' in f]
 
 preds = {}
-for i in range(len(file_names)):
-    if i % 10 == 0:
-        length = len(file_names)
-        print(f"Finding stop lights in image {i}/{length}")
+for i in [10, 46, 47, 332, 24, 33, 73, 90]:
     # read image using PIL:
     I = Image.open(os.path.join(data_path,file_names[i]))
 
